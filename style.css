@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.square {
+    border: 1px solid grey;
+    box-sizing: content-box;
+    flex: 1;
+}
