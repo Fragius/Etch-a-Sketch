@@ -1,6 +1,9 @@
 const grid = document.querySelector(".container");
+const colourBtn = document.querySelector(".colour");
+const darkBtn = document.querySelector(".dark");
+const resizeBtn = document.querySelector(".resize")
+let isColoured = true;
 loadGrid()
-
 function loadGrid(sideLength = 16) {
     for (let i = 0; i < sideLength; i++) { //i is the number of rows
         const row = document.createElement("div");
@@ -23,3 +26,13 @@ function paintSquare(element) {
         console.log(element.style.opacity);
     }
 }  
+
+function deleteGrid() {
+    document.querySelectorAll(".row").
+    forEach(row => row.remove());
+}
+
+resizeBtn.addEventListener("click", () => {
+    deleteGrid();
+    loadGrid(+prompt("choose a number between one and one hundred"))
+})
