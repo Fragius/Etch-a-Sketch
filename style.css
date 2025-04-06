@@ -1,8 +1,15 @@
+body {
+    padding: 10% 40%;
+    background-color: rgb(70, 11, 70);
+    text-align: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
     aspect-ratio: 1 / 1;
+    background-color: white;
 }
 
 .row {
@@ -11,7 +18,19 @@
 }
 
 .square {
-    border: 1px solid grey;
     box-sizing: content-box;
     flex: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.button {
+    font-size: 1.3em;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    background-color:darkblue
 }
