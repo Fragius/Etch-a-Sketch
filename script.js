@@ -33,6 +33,25 @@ function deleteGrid() {
 }
 
 resizeBtn.addEventListener("click", () => {
+    isColoured = true;
     deleteGrid();
     loadGrid(+prompt("choose a number between one and one hundred"))
+})
+
+darkBtn.addEventListener("click", () => {
+    isColoured = false;
+    const squares = document.querySelectorAll(".square")
+    .forEach(square => {
+        square.style.backgroundColor = "black";
+        square.style.opacity = 0;
+    })
+})
+
+colourBtn.addEventListener("click", () => {
+    isColoured = true;
+    const squares = document.querySelectorAll(".square")
+    .forEach(square => {
+        square.style.backgroundColor = "white";
+        square.style.opacity = 1;
+    })
 })
